@@ -1,0 +1,94 @@
+.hardsale-list {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1.5rem 0 2.5rem 0;
+}
+
+.hardsale-card {
+  background: #fff;
+  border: 1.5px solid #f4cfcf;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  padding: 1rem;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+.hardsale-card:hover {
+  border: 1.5px solid #d70018;
+  box-shadow: 0 4px 24px rgba(200,0,30,0.10);
+}
+
+.hardsale-image {
+  width: 90%;
+  max-width: 180px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.7rem;
+}
+
+.hardsale-info {
+  width: 100%;
+  text-align: center;
+}
+
+.hardsale-name {
+  font-size: 1.05rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  color: #222;
+}
+
+.hardsale-category {
+  background: #fff5e3;
+  color: #d70018;
+  border-radius: 10px;
+  padding: 2px 9px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin-bottom: 0.3rem;
+  display: inline-block;
+}
+
+.hardsale-price {
+  color: #d70018;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0.3rem 0;
+}
+
+.hardsale-stock {
+  color: #555;
+  font-size: 0.97rem;
+  margin-bottom: 0.6rem;
+}
+
+.hardsale-btn {
+  width: 100%;
+  background: #d70018;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 0.6rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.hardsale-btn:hover {
+  background: #a80013;
+}
+
+.product-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}

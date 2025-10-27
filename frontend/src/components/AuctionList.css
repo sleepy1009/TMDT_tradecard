@@ -1,0 +1,221 @@
+.auction-list {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1.5rem 0 2.5rem 0;
+  padding: 0 1rem;
+}
+
+.no-products {
+  width: 100%;
+  text-align: center;
+  padding: 3rem;
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+.auction-card {
+  background: #fff;
+  border: 1.5px solid #ced7f1;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 270px;
+  padding: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.auction-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.auction-card:hover::before {
+  transform: scaleX(1);
+}
+
+.auction-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0,80,200,0.15);
+  border-color: #007bff;
+}
+
+.auction-image-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 0.7rem;
+}
+
+.auction-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.auction-card:hover .auction-image {
+  transform: scale(1.05);
+}
+
+.auction-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(255,107,107,0.3);
+}
+
+.auction-info {
+  width: 100%;
+}
+
+.auction-name {
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: #222;
+  line-height: 1.4;
+  display: -webkit-box;
+  ---webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.auction-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.4rem;
+}
+
+.auction-category {
+  background: linear-gradient(45deg, #e3f0ff, #d4ebff);
+  color: #007bff;
+  border-radius: 10px;
+  padding: 4px 10px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.auction-category:hover {
+  transform: scale(1.05);
+}
+
+.auction-timer {
+  font-weight: 600;
+  color: #d70018;
+  background: linear-gradient(45deg, #ffeef0, #ffe6e8);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.auction-bid {
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+  padding: 8px 0;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.bid-price {
+  color: #d70018;
+  font-weight: bold;
+  font-size: 1.1rem;
+  background: linear-gradient(45deg, #fff5f5, #ffeef0);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.auction-btn {
+  width: 100%;
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 0.7rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,123,255,0.2);
+}
+
+.auction-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.auction-btn:hover::before {
+  left: 100%;
+}
+
+.auction-btn:hover {
+  background: linear-gradient(45deg, #0056b3, #004085);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,123,255,0.3);
+}
+
+.auction-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .auction-list {
+    gap: 1.5rem;
+  }
+  
+  .auction-card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auction-list {
+    gap: 1rem;
+  }
+  
+  .auction-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.product-card-link {
+  text-decoration: none; 
+  color: inherit; 
+  display: block; 
+}

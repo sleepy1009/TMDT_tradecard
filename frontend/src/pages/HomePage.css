@@ -1,0 +1,134 @@
+.homepage-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.backend-message {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #555;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.product-image {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-name {
+  font-size: 1.1rem;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #d70018;
+}
+
+.add-to-cart-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #0056b3;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+}
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(0,0,0,0.1);
+  border-top-color: #2196f3;
+  border-radius: 50%;
+}
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+
+.carousel-section-container {
+  max-width: 1300px;
+  margin: 4rem auto; 
+  padding: 0 1rem;
+}
+
+.carousel-wrapper {
+  padding: 2rem; 
+  border-radius: 16px !important;
+  background: #fff !important;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08) !important;
+  border: none;
+}
+
+.carousel-header {
+  align-items: center ;
+  margin-bottom: 1.5rem;
+  padding: 0 0.5rem;
+}
+
+.carousel-title {
+  font-weight: 700 !important;
+  color: #212529;
+}
+
+.carousel-title span {
+  margin-right: 0.75rem;
+}
+
+.view-all-btn {
+  color: var(--primary-color, #007bff) !important;
+  font-weight: 600 !important;
+  text-transform: none !important; 
+  transition: background-color 0.3s ease !important;
+}
+
+.view-all-btn:hover {
+  background-color: rgba(0, 123, 255, 0.05) !important;
+}

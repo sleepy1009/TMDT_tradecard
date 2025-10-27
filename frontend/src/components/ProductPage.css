@@ -1,0 +1,136 @@
+.product-page-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.product-detail-layout {
+  display: grid;
+  grid-template-columns: 45fr 55fr; 
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.product-image-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: sticky;
+  top: 80px; 
+}
+.main-image-container {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #f5f5f5;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border: 1px solid #eee;
+}
+.main-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.main-image-container img:hover {
+    transform: scale(1.05);
+}
+
+.thumbnail-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 0.75rem;
+}
+.thumbnail-item {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease;
+  opacity: 0.7;
+}
+.thumbnail-item.active {
+  border-color: #1976d2; 
+  opacity: 1;
+  box-shadow: 0 0 8px rgba(25, 118, 210, 0.5);
+}
+.thumbnail-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.product-info-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-key-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+.action-box {
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 1rem 0;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+}
+.action-box.auction {
+  background-color: #fffbe6;
+  border: 1px solid #ffe58f;
+}
+
+.product-description {
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .product-detail-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .product-image-gallery {
+    position: static;
+  }
+}
+
+.product-hero-paper {
+  background: #fcfcfc;
+}
+
+.enhanced-main-image {
+  position: relative;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+}
+
+.main-product-image:hover {
+  transform: scale(1.07);
+  transition: transform 0.3s;
+}
+
+.product-badge {
+  z-index: 2;
+}
+
+@media (max-width: 600px) {
+  .product-hero-paper {
+    padding: 0.5rem !important;
+  }
+  .suggested-products-grid {
+    flex-direction: column;
+  }
+}
